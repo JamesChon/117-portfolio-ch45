@@ -21,7 +21,7 @@
     <header class="center-row">
         <!-- Left Side -->
         <div class="logo center-row">
-            <a href="">
+            <a href="/">
                 <h2>James Chon</h2>
             </a>
         </div>
@@ -38,10 +38,10 @@
             </div>
             <!-- the menu -->
             <div class="nav-option center-row">
-                <a href="">About Me</a>
-                <a href="">Projects</a>
+                <a href="{% url 'about' %}">About Me</a>
+                <a href="{% url 'projects-list' %}">Projects</a>
                 <a href="">Experience</a>
-                <a href="">Contact</a>
+                <a href="{% url 'contact' %}">Contact</a>
             </div>
         </nav>
     </header>
@@ -50,6 +50,7 @@
     {% endblock content %}
 
     <h2>Here is my footer</h2>
+    
 
 </body>
 

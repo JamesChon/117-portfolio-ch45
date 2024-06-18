@@ -1,10 +1,75 @@
 {% extends 'base.html' %}
 
 {% block title %}About Me{% endblock title %}
-
+{% load static %}
 
 {% block content %}
 
-<h1>Hello! This is about me</h1>
+<section class="about-section center-row">
+    <div class="about-img-container center-row">
+        <img src="{% static 'img/Dari.JPG' %}" alt="">
+    </div>
+
+    <div class="about-description-container center-column">
+        <h1>My Role as a Dev</h1>
+        <h2>James Chon</h2>
+
+        <p>
+            I'm James Chon, originally from Guam and now living in Las Vegas. I love exploring new cultures and diving
+            into the
+            world of video games. My passion for innovation led me to a fullstack software developer bootcamp, where I'm
+            combining
+            my adventurous spirit with coding skills. <br> <br>
+
+            I'm excited to grow as a software developer, working on projects that tackle important issues and push the
+            boundaries of
+            technology. I believe technology can drive positive change, and I'm committed to using my skills to make a
+            difference.
+            As I continue in this field, I aim to master technical concepts while fostering empathy, integrity, and
+            inclusivity.
+            Let's embark on this journey of discovery, innovation, and continuous learning together.
+            </p>
+            
+            <div class="skill-list center-column">
+                <h2>Skills</h2>
+                <div class="label-list center-row">
+                    <label class="label-text">HTMl</label>
+                    <label class="label-text">CSS</label>
+                    <label class="label-text">JAVASCRIPT</label>
+                    <label class="label-text">SQL</label>
+                    <label class="label-text">JAVA</label>
+                    <label class="label-text">PYTHON</label>
+                    <label class="label-text">DJANGO</label>
+                    <label class="label-text">FIGMA</label>
+                </div>
+            </div>
+            </div>
+            </section>
+            
+            <section class="projects-section center-column">
+                <h2>Projects</h2>
+            
+                <div class="projects-list">
+                    <!-- All the cards here -->
+            
+                    <div class="project-card">
+                        <a href="https://github.com/" target="blank">
+                            <img src="{% static 'img/picture-1.jpg' %}" alt="">
+                            <p>First Project</p>
+                            <p>this is the description of my first project. It shoud be a short description.</p>
+                            <p>YYYY</p>
+            
+                            <div class="skills-list center-row">
+                                <label class="label-text">CSS</label>
+                                <label class="label-text">CSS</label>
+                                <label class="label-text">CSS</label>
+                                <label class="label-text">CSS</label>
+                            </div>
+                        </a>
+                    </div>
+            
+                </div>
+
+</section>
 
 {% endblock content %}
