@@ -6,3 +6,6 @@ def projects_list(request):
     projects = Project.objects.all()
     return render(request, 'content/projects-list.html', {'projects': projects})
 
+def project_new(request):
+    return render(request, 'content/projects-new.html')
+

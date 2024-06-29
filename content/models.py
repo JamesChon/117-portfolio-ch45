@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Technology(models.Model):
+class Skill(models.Model):
     name = models.CharField(max_length=200)
 
     def __str__(self):
@@ -13,7 +13,8 @@ class Project(models.Model):
     year = models.IntegerField()
     image = models.ImageField(upload_to='project_images/')
     repository = models.URLField()
-    technologies = models.ManyToManyField(Technology)
+    skill = models.ManyToManyField(Skill)
 
     def __str__(self):
-        return self.name
+        return f'{self.name} - ({self.year})'
+    

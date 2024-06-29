@@ -1,9 +1,20 @@
 {% extends 'base.html' %}
 
-{% block title %}{% endblock title %}
+{% block title %}Projects{% endblock title %}
 
-{% load static %}
 {% block content %}
+{% load static %}
+
+<section class="projects-section center-column">
+
+
+    <!-- Your 'Add Project' button here -->
+    {% if user.is_authenticated %}
+    <a class="btn-primary" href="">
+        Add Project
+    </a>
+    {% endif %}
+
 
 <h2>Projects</h2>
 
@@ -18,13 +29,14 @@
             <p>{{ project.year }}</p>
 
             <div class="skills-list center-row">
-                {% for tech in project.technologies.all %}
-                <label class="label-text">{{ tech.name }}</label>
+                {% for skill in project.skill.all %}
+                <label class="label-text">{{ skill.name }}</label>
                 {% endfor %}
             </div>
         </a>
     </div>
     {% endfor %}
 </div>
+</section>
 
 {% endblock content %}
